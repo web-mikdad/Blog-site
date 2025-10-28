@@ -2,8 +2,8 @@ import { createBrowserRouter } from "react-router";
 import { Headerpage } from "../components/Layout/FrontLayout";
 import BlogPage from "../components/Blog/BlogPage";
 import { Main } from "../MainSection";
-// import SignUpPage from "../components/Auth/SignIn";
-// import LoginPage from "../components/Auth/Login";
+import SignUpPage from "../components/Auth/SignIn";
+import LoginPage from "../components/Auth/Login";
 import AboutPage from "../Pages/AboutPage";
 
 export const router = createBrowserRouter([
@@ -23,14 +23,14 @@ export const router = createBrowserRouter([
         path:"/",
         Component:BlogPage
       },
-      // {
-      //   path:"/Signup",
-      //   Component:SignUpPage
-      // },
-      //  {
-      //   path:"/LoginPage",
-      //   Component:LoginPage
-      
+      {
+        path:"/Signup",
+        Component:SignUpPage
+      },
+       {
+        path:"/LoginPage",
+        Component:LoginPage
+      },
       
     ]
   },

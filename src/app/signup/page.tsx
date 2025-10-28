@@ -1,21 +1,14 @@
 "use client";
 
-import { Logo } from "@/components/logo";
-import { Button } from "@/components/ui/button";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "@/components/ui/form";
-import { Input } from "@/components/ui/input";
-import { Separator } from "@/components/ui/separator";
 import { zodResolver } from "@hookform/resolvers/zod";
-import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
+import { Logo } from "../../components/ui/logo";
+import { Button } from "../../components/ui/button";
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "../../components/ui/form";
+import { Separator } from "../../components/ui/separator";
+import { Input } from "../../components/ui/input";
+import { Link } from "react-router";
 
 const formSchema = z.object({
   email: z.string().email(),
@@ -39,7 +32,7 @@ const SignUp03Page = () => {
     <div className="h-screen flex items-center justify-center">
       <div className="w-full h-full grid lg:grid-cols-2">
         <div className="max-w-xs m-auto w-full flex flex-col items-center">
-          <Logo className="h-9 w-9" />
+          <Logo/>
           <p className="mt-4 text-xl font-semibold tracking-tight">
             Sign up for Shadcn UI Blocks
           </p>
@@ -104,7 +97,7 @@ const SignUp03Page = () => {
 
           <p className="mt-5 text-sm text-center">
             Already have an account?
-            <Link href="#" className="ml-1 underline text-muted-foreground">
+            <Link to="#" className="ml-1 underline text-muted-foreground">
               Log in
             </Link>
           </p>
