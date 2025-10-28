@@ -1,6 +1,9 @@
 import * as React from "react"
 
-import { cn } from "@/lib/utils"
+// Simple utility to concatenate class names (avoids dependency on "@/lib/utils")
+function cn(...inputs: Array<string | false | null | undefined>) {
+  return inputs.filter(Boolean).join(" ");
+}
 
 function Input({ className, type, ...props }: React.ComponentProps<"input">) {
   return (
