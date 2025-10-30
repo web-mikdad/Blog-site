@@ -5,11 +5,11 @@ import { Button } from "../ui/button";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "../ui/form";
 import { Input } from "../ui/input";
 import { Separator } from "../ui/separator";
-import { Logo } from "../ui/logo";
 
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { BackgroundPattern } from "../../Modules/Background";
 
 const formSchema = z.object({
   email: z.string().email(),
@@ -32,18 +32,12 @@ const SignUpPage = () => {
   return (
     <div className="min-h-screen w-full flex flex-col items-center justify-center from-gray-50 to-white dark:from-gray-900 dark:to-gray-950 px-4">
       {/* Top image */}
-      <div className="w-24 h-24 mb-6">
-        <img
-          src="./vite.svg"
-          alt="Signup illustration"
-          className="w-full h-full object-contain"
-        />
-      </div>
-
+      <div className="absolute inset-0 -z-10">
+              <BackgroundPattern />
+            </div>
       {/* Centered form card */}
-      <div className="bg-white dark:bg-gray-900 shadow-lg rounded-2xl p-8 w-full max-w-md border border-gray-200 dark:border-gray-800">
+      <div className="bg-white dark:bg-blue-900 shadow-lg rounded-2xl p-8 w-full max-w-md border border-gray-200 dark:border-gray-800">
         <div className="flex flex-col items-center">
-          <Logo />
           <p className="mt-4 text-2xl font-semibold text-gray-900 dark:text-white text-center">
             Sign up for Shadcn UI Blocks
           </p>

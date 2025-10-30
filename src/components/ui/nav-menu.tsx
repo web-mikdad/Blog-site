@@ -10,12 +10,16 @@ export function NavMenu(){
                     <li>
                         <Link className="font-bold"to= "/aboutpage">About</Link>
                     </li>
-                     <li>
-                        <Link className="font-bold" to= "/">Services</Link>
+                    <li>
+                        <Link className="font-bold"to= "/blog">Blog</Link>
                     </li>
                      <li>
-                        <Link className="font-bold"to= "/">Contact</Link>
+                        <Link className="font-bold" to= "/services">Services</Link>
                     </li>
+                     <li>
+                        <Link className="font-bold"to= "/contact">Contact</Link>
+                    </li>
+                    
                 </ul>
             </div>
         )

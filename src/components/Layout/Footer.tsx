@@ -80,10 +80,10 @@ const Footer = () => {
             {/* Copyright */}
             <span className="text-muted-foreground">
               &copy; {new Date().getFullYear()}{" "}
-              <Link to="/" target="_blank">
-                Shadcn UI Blocks
+              <Link className="" to="/" target="_blank">
+               
               </Link>
-              . All rights reserved.
+             
             </span>
 
             <div className="flex items-center gap-5 text-muted-foreground">

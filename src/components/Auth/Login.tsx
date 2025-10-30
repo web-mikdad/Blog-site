@@ -2,7 +2,6 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { Logo } from "../ui/logo";
 import { Button } from "../ui/button";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "../ui/form";
 import { Input } from "../ui/input";
@@ -30,7 +29,7 @@ const LoginPage = () => {
   return (
     <div className="min-h-screen flex items-center justify-center">
       <div className="max-w-xs w-full flex flex-col items-center">
-        <Logo/>
+       
         <p className="mt-4 text-xl font-semibold tracking-tight">
           Log in to Shadcn UI Blocks
         </p>

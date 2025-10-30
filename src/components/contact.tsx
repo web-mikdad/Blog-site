@@ -1,8 +1,7 @@
 import { MailIcon, MapPinIcon, PhoneIcon } from "lucide-react";
 import { Link } from "react-router";
 
-
-const Contact = () => (
+const Contact01Page = () => (
   <div className="min-h-screen flex items-center justify-center">
     <div className="text-center">
       <b className="text-muted-foreground uppercase font-semibold text-sm">
@@ -64,4 +63,4 @@ const Contact = () => (
   </div>
 );
 
-export default Contact;
+export default Contact01Page;

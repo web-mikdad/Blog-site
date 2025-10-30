@@ -3,7 +3,6 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { Logo } from "../../components/ui/logo";
 import { Button } from "../../components/ui/button";
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "../../components/ui/form";
 import { Separator } from "../../components/ui/separator";
@@ -32,7 +31,6 @@ const SignUp03Page = () => {
     <div className="h-screen flex items-center justify-center">
       <div className="w-full h-full grid lg:grid-cols-2">
         <div className="max-w-xs m-auto w-full flex flex-col items-center">
-          <Logo/>
           <p className="mt-4 text-xl font-semibold tracking-tight">
             Sign up for Shadcn UI Blocks
           </p>
