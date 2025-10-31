@@ -1,3 +1,4 @@
+// src/routes/router.tsx
 import { createBrowserRouter } from "react-router";
 import { Headerpage } from "../components/Layout/FrontLayout";
 import BlogPage from "../components/Blog/BlogPage";
@@ -17,10 +18,13 @@ export const router = createBrowserRouter([
     path: "/",
     Component: Headerpage,
     children: [
+      // 🏠 Home page
       {
         index: true,
         Component: Main,
       },
+
+      // 👤 About pages
       {
         path: "aboutpage",
         Component: AboutPage,
@@ -29,10 +33,14 @@ export const router = createBrowserRouter([
         path: "subaboutpage",
         Component: SubAboutPage,
       },
+
+      // 📞 Contact
       {
         path: "contact",
         Component: Contact,
       },
+
+      // 🔐 Authentication
       {
         path: "signup",
         Component: SignUpPage,
@@ -42,36 +50,31 @@ export const router = createBrowserRouter([
         Component: LoginPage,
       },
 
-      // ✅ Blog list page
+      // 📰 Blog section
       {
         path: "blog",
         Component: BlogPage,
       },
-
-      // ✅ Blog details (dynamic)
       {
         path: "blog/:id",
         Component: BlogDetails,
       },
 
-      // ✅ Services main page
+      // 🧑‍💻 Services section
       {
         path: "services",
         Component: Services,
       },
-
-      // ✅ Dynamic service details page
       {
         path: "services/:slug",
         Component: ServiceDetails,
       },
 
-      // ✅ Booking form page
+      // 💼 Booking form (dynamic)
       {
-        path: "book-service",
+        path: "book-service/:serviceName?",
         Component: BookService,
       },
-
     ],
   },
 ]);

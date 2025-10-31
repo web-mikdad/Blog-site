@@ -9,53 +9,55 @@ import {
 import { motion } from "framer-motion";
 import { Card, CardContent, CardHeader } from "../components/ui/card";
 import { Button } from "../components/ui/button";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 export function Services() {
   const services = [
-    {
-      title: "Frontend Development",
-      desc: "Building responsive, fast, and user-friendly web interfaces using React, Next.js, and Tailwind CSS for a seamless user experience.",
-      icon: <Code className="w-8 h-8 text-blue-500" />,
-      img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1000&q=80",
-      path: "/services/frontend",
-    },
-    {
-      title: "Backend Development",
-      desc: "Creating powerful, secure, and scalable backends using Node.js, Express, and MongoDB to support your digital products.",
-      icon: <Database className="w-8 h-8 text-green-500" />,
-      img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1000&q=80",
-      path: "/services/backend",
-    },
-    {
-      title: "Full Stack Projects",
-      desc: "From concept to deployment — I handle both frontend and backend, ensuring your web app performs perfectly across all devices.",
-      icon: <Globe className="w-8 h-8 text-indigo-500" />,
-      img: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1000&q=80",
-      path: "/services/fullstack",
-    },
-    {
-      title: "UI/UX Design",
-      desc: "Designing modern, intuitive interfaces with strong focus on usability, accessibility, and aesthetic balance.",
-      icon: <Paintbrush className="w-8 h-8 text-pink-500" />,
-      img: "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1000&q=80",
-      path: "/services/uiux",
-    },
-    {
-      title: "Mobile Responsive Design",
-      desc: "Making sure every web application is fully optimized for mobile, tablet, and desktop with fluid design and smooth animations.",
-      icon: <Smartphone className="w-8 h-8 text-teal-500" />,
-      img: "https://images.unsplash.com/photo-1607083206968-13611e3c13c7?auto=format&fit=crop&w=1000&q=80",
-      path: "/services/responsive",
-    },
-    {
-      title: "Cloud & Deployment",
-      desc: "Deploying and managing web apps on modern cloud platforms like Vercel, Netlify, and AWS for scalability and reliability.",
-      icon: <Cloud className="w-8 h-8 text-yellow-500" />,
-      img: "https://images.unsplash.com/photo-1581092334707-1e31b14926f9?auto=format&fit=crop&w=1000&q=80",
-      path: "/services/cloud",
-    },
-  ];
+  {
+    title: "Frontend Development",
+    desc: "Building responsive, fast, and user-friendly web interfaces using React, Next.js, and Tailwind CSS for a seamless user experience.",
+    icon: <Code className="w-8 h-8 text-blue-500" />,
+    img: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&w=1000&q=80",
+    path: "/services/frontend",
+  },
+  {
+    title: "Backend Development",
+    desc: "Creating powerful, secure, and scalable backends using Node.js, Express, and MongoDB to support your digital products.",
+    icon: <Database className="w-8 h-8 text-green-500" />,
+    img: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1000&q=80",
+    path: "/services/backend",
+  },
+  {
+    title: "Full Stack Projects",
+    desc: "From concept to deployment — I handle both frontend and backend, ensuring your web app performs perfectly across all devices.",
+    icon: <Globe className="w-8 h-8 text-indigo-500" />,
+    img: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1000&q=80",
+    path: "/services/fullstack",
+  },
+  {
+    title: "UI/UX Design",
+    desc: "Designing modern, intuitive interfaces with strong focus on usability, accessibility, and aesthetic balance.",
+    icon: <Paintbrush className="w-8 h-8 text-pink-500" />,
+    img: "https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=1000&q=80",
+    path: "/services/uiux",
+  },
+  {
+    title: "Mobile Responsive Design",
+    desc: "Making sure every web application is fully optimized for mobile, tablet, and desktop with fluid design and smooth animations.",
+    icon: <Smartphone className="w-8 h-8 text-teal-500" />,
+    // ✅ FIXED: new, clean, high-quality mobile workspace image
+    img: "https://images.unsplash.com/photo-1609921212029-823f7c36293d?auto=format&fit=crop&w=1000&q=80",
+    path: "/services/responsive",
+  },
+  {
+    title: "Cloud & Deployment",
+    desc: "Deploying and managing web apps on modern cloud platforms like Vercel, Netlify, and AWS for scalability and reliability.",
+    icon: <Cloud className="w-8 h-8 text-yellow-500" />,
+    // ✅ FIXED: modern cloud infrastructure background
+    img: "https://images.unsplash.com/photo-1605902711622-cfb43c4437b5?auto=format&fit=crop&w=1000&q=80",
+    path: "/services/cloud",
+  },
+];
 
   const pricing = [
     {
@@ -133,7 +135,6 @@ export function Services() {
                     alt={service.title}
                     className="w-full h-full object-cover transition-transform duration-700 hover:scale-110"
                   />
-                  <div className="absolute inset-0 from-black/70 to-transparent"></div>
                   <div className="absolute top-3 left-3 bg-white/95 dark:bg-gray-900/80 p-3 rounded-full shadow-md">
                     {service.icon}
                   </div>
@@ -147,11 +148,25 @@ export function Services() {
                   <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
                     {service.desc}
                   </p>
-                  <Link to={service.path}>
-                    <Button className="w-full from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-medium shadow-md">
-                      Learn More
-                    </Button>
-                  </Link>
+
+                  {/* Learn More */}
+                  <div className="flex gap-2">
+                    <Link to={service.path} className="w-1/2">
+                      <Button className="w-full from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white font-medium shadow-md">
+                        Learn More
+                      </Button>
+                    </Link>
+
+                    {/* Book Now (Dynamic) */}
+                    <Link
+                      to={`/book-service/${encodeURIComponent(service.title)}`}
+                      className="w-1/2"
+                    >
+                      <Button className="w-full bg-green-600 hover:bg-green-700 text-white font-medium shadow-md">
+                        Book Now
+                      </Button>
+                    </Link>
+                  </div>
                 </CardContent>
               </Card>
             </motion.div>
@@ -189,9 +204,11 @@ export function Services() {
                     </li>
                   ))}
                 </ul>
-                <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold">
-                  Choose Plan
-                </Button>
+                <Link to={`/book-service/${encodeURIComponent(plan.name)}`}>
+                  <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold">
+                    Choose Plan
+                  </Button>
+                </Link>
               </div>
             ))}
           </div>
@@ -210,12 +227,11 @@ export function Services() {
             Have a project idea? Let’s collaborate to create a beautiful,
             high-performance web experience that brings your vision to life.
           </p>
-          <Link to="/contact">
-            <Button
-              size="lg"
-              className="bg-white text-blue-700 hover:bg-blue-50 font-semibold px-8"
-            >
-              Get in Touch
+
+          {/* ✅ Fixed Book Now Button */}
+          <Link to="/book-service">
+            <Button className="mt-4 w-[95px] p-6 text-bold bg-black text-blue-700 font-semibold hover:bg-gray-100">
+              Get in teach
             </Button>
           </Link>
         </motion.div>
