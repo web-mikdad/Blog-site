@@ -69,7 +69,7 @@ const Contact = () => {
           <motion.div whileHover={{ scale: 1.03 }} className="p-6 bg-white/80 dark:bg-gray-800/80 backdrop-blur-lg rounded-2xl shadow-md border border-gray-200 dark:border-gray-700">
             <MapPin className="w-10 h-10 text-blue-600 mx-auto mb-3" />
             <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-1">Location</h3>
-            <p className="text-gray-500 mb-2">Dhaka, Bangladesh</p>
+            <p className="text-gray-500 mb-2">Trishal,Mymensing,Bangladesh</p>
             <a href="https://maps.google.com?q=Dhaka" target="_blank" className="text-blue-700 font-medium">
               View on Map
             </a>
