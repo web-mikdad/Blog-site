@@ -4,7 +4,7 @@ import { Button } from "../../components/ui/button";
 export default function SubAboutPage() {
   const mikdad = {
     name: "Mikdad Bin Mansur",
-    age: 22,
+    age: 22, 
     profession: "Web Developer",
     education: "BSc in Computer Science (Ongoing)",
     location: "Dhaka, Bangladesh",
@@ -47,7 +47,7 @@ export default function SubAboutPage() {
           <img
             src={mikdad.image}
             alt={mikdad.name}
-            className="w-72 h-72 rounded-full object-cover border-4 border-white shadow-lg"
+            className="w-50 h-50 rounded-full object-cover border-4 border-white shadow-lg"
           />
         </motion.div>
 
