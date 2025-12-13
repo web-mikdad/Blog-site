@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "../../components/ui/button";
 // import { BackgroundPattern } from "../../Modules/Background";
 import { ArrowRight } from "lucide-react";
-import aboutImage from "./image.png"; // ✅ Place img.jpg in the same folder
+import aboutImage from "./mikdadfahmid.jpg"; // ✅ Place img.jpg in the same folder
 
 const aboutSections = [
   {

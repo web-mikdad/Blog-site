@@ -7,7 +7,7 @@ import { CirclePlay, X, Code2 } from "lucide-react";
 
 // ✅ Smooth fade-up animation
 const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 40 },
+  hidden: { opacity: 0, y: 5 },
   visible: {
     opacity: 1,
     y: 0,
@@ -57,7 +57,7 @@ export default function Banner() {
         className="relative z-10 text-center w-full max-w-5xl"
       >
         {/* ✅ Name + Avatar */}
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 mt-5">
+        <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6">
           <motion.div className="text-xl sm:text-2xl md:text-3xl font-bold select-none space-y-2">
             <motion.h4
               className="text-transparent bg-clip-text bg-linear-to-r from-green-400 via-blue-500 to-pink-500 tracking-wide whitespace-nowrap"
@@ -73,7 +73,7 @@ export default function Banner() {
               />
             </motion.h4>
 
-            <motion.h4 className="text-pink-500 text-sm sm:text-base mt-2" whileHover={{ scale: 1.05 }}>
+            <motion.h4 className="text-pink-500 text-sm sm:text-base " whileHover={{ scale: 1.05 }}>
               FROM DEVELOPING WORLD
             </motion.h4>
           </motion.div>
@@ -84,7 +84,7 @@ export default function Banner() {
               boxShadow: "0 0 25px rgba(59,130,246,0.7), 0 0 45px rgba(236,72,153,0.5)",
             }}
             transition={{ duration: 0.4 }}
-            src="./image.png"
+            src="./mikdadfahmid.jpg"
             alt="Mikdad"
             className="w-24 h-24 sm:w-28 sm:h-28 md:w-32 md:h-32 rounded-full shadow-lg shadow-blue-500/30 cursor-pointer object-cover"
           />

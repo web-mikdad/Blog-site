@@ -8,7 +8,7 @@ export default function SubAboutPage() {
     profession: "Web Developer",
     education: "BSc in Computer Science (Ongoing)",
     location: "Dhaka, Bangladesh",
-    image: "./image.png",
+    image: "./mikdadfahmid.jpg",
     skills: ["React", "Next.js", "Tailwind CSS", "TypeScript", "Node.js"],
   };
 
